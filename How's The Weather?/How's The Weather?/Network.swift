@@ -12,9 +12,9 @@ class Network: ObservableObject {
     @Published var weather: Welcome = Welcome.sample
     
     var apiKey = "95515142c1130248c00794ab5df8dda5"
-
+   
     func getWeather() {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=40&lon=-80&appid=\(apiKey)") else { fatalError("Missing URL") }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Jinju,kr&appid=\(apiKey)") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
          
